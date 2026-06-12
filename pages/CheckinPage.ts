@@ -51,4 +51,13 @@ export class CheckinPage{
         });
 
     }
+
+    async clickRecentVisit() {
+
+        const recentVisit = this.page.getByText('최근 방문 내역').locator('..');
+
+        await recentVisit.getByRole('button', {
+            name: /리뷰 쓰기/
+        }).first().click();
+    }
 };

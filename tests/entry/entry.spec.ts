@@ -43,11 +43,6 @@ test.describe('리뷰쓰기 진입 테스트', () => {
         expect(fileChooser).toBeTruthy();
     });
 
-    
-    test('C14681345 체크인페이지 - 결제내역', async ({ page }) => {
-        
-    });
-
 
     test('c14681346 체크인페이지 - 사진/영상', async ({ page }) => {
 
@@ -79,16 +74,27 @@ test.describe('리뷰쓰기 진입 테스트', () => {
             .nth(2)
         ).not.toBeVisible();
     });
-
+    */
     
     test('c14681348 체크인페이지 - 최근 방문 내역', async ({ page }) => {
 
+        const popupPromise = page.waitForEvent('popup');
+
+        await checkinPage.clickRecentVisit();
+
+        const reviewPage = await popupPromise;
+
+        await reviewPage.waitForLoadState();
+
+        console.log('기존 페이지:', page.url());
+        console.log('새 페이지:', reviewPage.url());
+
+        await expect(reviewPage).toHaveURL(
+            /my\/open\/review\?visitId=.+/
+        );
     });
 
-    test('c14681349 체크인페이지 - 최근 결제 내역', async ({ page }) => {
-
-    });
-
+    /*
     test('c14681350 MY > 타임라인 ', async ({ page }) => {
 
     });

@@ -1,5 +1,7 @@
 # info
 .env
+.env.*
+!.env.example
 
 # Playwright
 node_modules/
@@ -8,6 +10,15 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-screenshots/
 
+# LOG
+screenshots/
 *.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
