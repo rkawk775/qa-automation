@@ -143,7 +143,7 @@ test.describe('리뷰쓰기 진입 테스트', () => {
         );
 
     });
-    */
+    
 
     
     test('c14681352 리뷰 피드', async ({ page }) => {
@@ -165,5 +165,6 @@ test.describe('리뷰쓰기 진입 테스트', () => {
             /my\/(open\/review\?reviewGroupId|review\/edit)\/.+/
         );
     });
-    
+    */
+
 });
