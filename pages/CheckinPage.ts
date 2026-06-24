@@ -5,9 +5,7 @@ export class CheckinPage{
     constructor(private page: Page) {}
 
     async moveCheckinPage(){
-        await this.page.getByRole('button', {
-            name: '리뷰 쓰기',
-        }).click();
+        await this.page.locator('button:has(span:text("my.reviewwritebttn"))').click();
     }
 
     async openReceipt() {

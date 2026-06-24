@@ -88,7 +88,7 @@ test.describe('리뷰쓰기 진입 테스트', () => {
         ).not.toBeVisible();
     });
     
-    
+
     test('c14681348 체크인페이지 - 최근 방문 내역', async ({ page }) => {
 
         await checkinPage.moveCheckinPage();
