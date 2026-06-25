@@ -1,3 +1,3 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","2613","모바일 확인","Android Chrome","2026-06-24","passed","2026-06-24","","mobile.spec.ts","",""
-"","3160","GitHub Actions 실행 확인 테스트","Android Chrome","2026-06-24","passed","2026-06-24","","example.spec.ts","",""
+"","2621","GitHub Actions 실행 확인 테스트","Android Chrome","2026-06-25","passed","2026-06-25","","example.spec.ts","",""
+"","2674","모바일 확인","Android Chrome","2026-06-25","passed","2026-06-25","","mobile.spec.ts","",""
