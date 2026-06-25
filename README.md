@@ -26,9 +26,11 @@ GitHub Actions 기반 CI 환경과 Allure Report Dashboard를 구축하여
 ## 3. 자동화 대상
 <details>
   <summary>1. E2E Test Automation</summary>
+  
   - 사용자 시나리오 기반 테스트 자동화
   - Page Object Model 구조 적용
   - Popup 페이지 이동 검증
+
 </details>
 
 <details>
