@@ -170,6 +170,8 @@ Workflow 파일: .github/workflows/playwright.yml  <br>
 </tr>
 </table>
 
+<br>
+<br>
 
 ## 6. 테스트 결과 Dashboard
 배포된 Allure Report는 GitHub Pages를 통해 확인 가능합니다.
