@@ -90,9 +90,89 @@ qa-automation
 <br>
 
 ## 5. CI/CD 흐름
+GitHub Actions를 활용하여 코드 변경 발생 시 자동으로 테스트를 실행하고, <br>
+테스트 결과를 Allure Report로 생성하여 GitHub Pages Dashboard에 배포하는 CI/CD 환경을 구성하였습니다.
+
+
+### Workflow 실행 조건
+
+`main` 브랜치 기준으로 Push 또는 Pull Request 발생 시 GitHub Actions Workflow가 실행됩니다.
+
+
+### CI/CD Process
+
+```text
+Git Push / Pull Request
+
+        ↓
+
+GitHub Actions Trigger
+
+        ↓
+
+Node.js 환경 설정 및 Dependency 설치
+
+        ↓
+
+Playwright Browser 설치
+
+        ↓
+
+Playwright E2E Test 실행
+
+        ↓
+
+Test Result 생성
+(PASS / FAIL, Screenshot)
+
+        ↓
+
+Allure Report 생성
+
+        ↓
+
+GitHub Pages Dashboard 배포
+
+```
+
+### GitHub Actions Workflow
+
+Workflow 파일: .github/workflows/playwright.yml  <br>
+테스트 실행 결과는 Allure Report를 통해 관리합니다.
+
+<table width="250%">
+<tr>
+<th width="50%" style="white-space: nowrap;">실행 단계</th>
+<th width="50%" style="white-space: nowrap;">관리 항목</th>
+</tr>
+
+<tr>
+<td valign="top" style="white-space: nowrap;">
+
+1. Repository Checkout<br>
+2. Node.js 환경 구성<br>
+3. npm dependency 설치<br>
+4. Playwright Browser 설치<br>
+5. Test 실행<br>
+6. Allure Report 생성<br>
+7. GitHub Pages 배포
+
+</td>
+
+<td valign="top" style="white-space: nowrap;">
+
+1. Test Case 실행 결과<br>
+2. PASS / FAIL 상태<br>
+3. 실패 Screenshot<br>
+4. 테스트 실행 이력
+
+</td>
+</tr>
+</table>
+
+
 ## 6. 테스트 결과 Dashboard
-테스트 결과는 GitHub Pages를 통해 확인 가능합니다.
-Allure Dashboard를 사용하였습니다.
+배포된 Allure Report는 GitHub Pages를 통해 확인 가능합니다.
 
 Dashboard: https://rkawk775.github.io/qa-automation/
 <br>
