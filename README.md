@@ -179,6 +179,6 @@ Workflow 파일: .github/workflows/playwright.yml  <br>
 Dashboard: https://rkawk775.github.io/qa-automation/
 <br>
 
-//## 7. 시연 영상
+<!-- ## 7. 시연 영상 -->
 
-//## 8. 개선 방향
+<!-- ## 8. 개선 방향 -->
